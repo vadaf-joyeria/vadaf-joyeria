@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vadaf Joyeria — Catálogo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img id="logo" src="logovadafs.png" alt="Vadaf logo" class="brand-logo">
+      <div class="brand-title">Vadaf Joyeria</div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">INICIO</a>
+      <a href="catalogo.html" class="nav-link active">CATALOGO</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="catalog-hero">
+      <h2>Catálogo</h2>
+      <p>Selecciona entre nuestras piezas tejidas a mano con detalles en oro 18k y dijes exclusivos.</p>
+    </section>
+
+    <section id="catalogGrid" class="catalog-grid" aria-live="polite">
+      <!-- Productos se inyectan desde script.js -->
+    </section>
+  </main>
+
+  <!-- Contacto (botón en esquina inferior derecha) -->
+  <div class="contact-fixed">
+    <button id="contactToggle" class="contact-btn">Contacto</button>
+    <aside id="contactPanel" class="contact-panel" aria-hidden="true">
+      <div class="contact-head">
+        <strong>Contáctanos</strong>
+        <button id="contactClose" class="close-small" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="contact-body">
+        <div><strong>Tel:</strong> <span id="c-phone">+34 643064075</span></div>
+        <div><strong>WhatsApp:</strong> <a id="c-wa-link" href="https://wa.me/34643064075" target="_blank" rel="noopener">+34 643064075</a></div>
+        <div><strong>Email:</strong> <a id="c-email" href="mailto:servicioalclientevadaf@gmail.com">servicioalclientevadaf@gmail.com</a></div>
+        <div><strong>Instagram:</strong> <a id="c-insta" href="https://www.instagram.com/joyeria_vadaf?igsh=ZjN4ZHdqdmFxdjVp" target="_blank" rel="noopener">joyeria_vadaf</a></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <small>© <span id="year-catalog"></span> Vadaf Joyeria</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

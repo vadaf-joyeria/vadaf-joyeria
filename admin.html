@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vadaf Joyeria — Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="logovadafs.png" alt="Vadaf logo" class="brand-logo">
+      <div class="brand-title">Vadaf Joyeria — Admin</div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">INICIO</a>
+      <a href="catalogo.html" class="nav-link">CATALOGO</a>
+      <a href="admin.html" class="nav-link active">ADMIN</a>
+    </nav>
+  </header>
+
+  <main class="page-content admin-content">
+    <!-- Login -->
+    <section id="loginSection" class="card admin-login">
+      <h2>Acceso Administrador</h2>
+      <label for="adminUser">Usuario</label>
+      <input id="adminUser" type="text" placeholder="Usuario">
+      <label for="adminPass">Contraseña</label>
+      <input id="adminPass" type="password" placeholder="Contraseña">
+      <div class="form-row actions">
+        <button id="btnLogin" class="btn-primary">Entrar</button>
+      </div>
+      <p class="muted">Usuario: <code>VadafJoyeria</code> — Contraseña: <code>DaniVadafj</code></p>
+    </section>
+
+    <!-- Admin panel (hidden until login) -->
+    <section id="adminPanel" class="card admin-panel" style="display:none;">
+      <div class="admin-top">
+        <h2>Panel de Administración</h2>
+        <div>
+          <button id="btnLogout" class="btn-ghost">Cerrar sesión</button>
+        </div>
+      </div>
+
+      <!-- Form: agregar producto -->
+      <div class="card-block">
+        <h3>Agregar publicación</h3>
+        <form id="productForm">
+          <label for="productName">Nombre</label>
+          <input id="productName" type="text" required>
+
+          <label for="productDesc">Descripción</label>
+          <textarea id="productDesc" rows="3" required></textarea>
+
+          <label for="productImage">Imagen (desde dispositivo)</label>
+          <input id="productImage" type="file" accept="image/*" required>
+
+          <div class="form-row actions">
+            <button type="submit" class="btn-primary">Publicar</button>
+            <button id="btnRefresh" type="button" class="btn-ghost">Refrescar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Lista: productos con botón eliminar -->
+      <div class="card-block">
+        <h3>Publicaciones</h3>
+        <div id="adminList" class="admin-list"></div>
+      </div>
+
+      <!-- Contactos -->
+      <div class="card-block">
+        <h3>Contactos</h3>
+        <label for="inputPhone">Teléfono</label>
+        <input id="inputPhone" type="text">
+
+        <label for="inputWhats">WhatsApp (enlace wa.me o número)</label>
+        <input id="inputWhats" type="text">
+
+        <label for="inputInsta">Instagram (URL completa)</label>
+        <input id="inputInsta" type="url">
+
+        <label for="inputEmail">Email</label>
+        <input id="inputEmail" type="email">
+
+        <div class="form-row actions">
+          <button id="btnSaveContacts" class="btn-primary">Guardar contactos</button>
+          <button id="btnLoadContacts" class="btn-ghost">Cargar predeterminados</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year-admin"></span> Vadaf Joyeria</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
